@@ -58,13 +58,13 @@ def Simpson_Composite(g, a, b, n):
     
 if __name__=='__main__':
     # take function as input from the user
-    fx = input("Enter the function whose integral you wish to determine : ")    
+    fx = input("F(x) : ")    
 
     # Enter the iterations and limits of integration
-    r = int(input('Enter the number of sub-intervals : '))
+    r = int(input(' sub-intervals (r) : '))
 
-    a = float(input('Please provide the lower limit (a) : ')); #  starting point or lower limit of the area
-    b = float(input('Please provide the upper limit (b) : ')); #  end point or upper limit of the area
+    a = float(input(' (a) : ')); #  starting point or lower limit of the area
+    b = float(input(' (b) : ')); #  end point or upper limit of the area
     Simpson_Composite(fx,a,b,r)
     Trapezoid_Composite(fx,a,b,r)
     Calc = St.Numerical_Integration(fx,a,b) # if you are using Jupyter Note-Book you don't use St
