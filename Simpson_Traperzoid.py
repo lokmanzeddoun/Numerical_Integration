@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from math import *
 # Define the function prefixes using NumPy
+
 class Numerical_Integration:
     # The a , b  , F --> function self --> is the object its self 
     def __init__(self, F, a, b):
@@ -30,7 +31,7 @@ class Numerical_Integration:
     
     def __str__(self):
         Result={"Trapezoidal Rule            |": str(self.TrapeziodalRule()),
-                "Simpson's Rule                  |": str(self.SimpsonRule())}
+                "Simpson's Rule              |": str(self.SimpsonRule())}
         
         Table = pd.DataFrame({'Results ': Result})
     

@@ -1,8 +1,6 @@
 
-
 import numpy as np
-
-
+import Simpson_Traperzoid as St   # If you Want to Use Jupyter Note Book YOu delete This line
 # Define the function prefixes using NumPy
 sin = np.sin
 cos = np.cos
@@ -26,7 +24,7 @@ def Trapezoid_Composite(g, a, b, n):
     # defining the area
     area = (h / 2) * (f(a) + f(b) + s1 )
 
-    print('Trapezoid Integral =', area)
+    print('Trapezoid Composite Integral =', area)
         
     
 #*******************************************************************    
@@ -49,7 +47,7 @@ def Simpson_Composite(g, a, b, n):
     # defining the area
     area = (h / 6) * (f(a) + f(b) + s1 + s2)
 
-    print('Simpson Integral =', area)
+    print('Simpson Composite Integral =', area)
 
 
 
@@ -69,3 +67,6 @@ if __name__=='__main__':
     b = float(input('Please provide the upper limit (b) : ')); #  end point or upper limit of the area
     Simpson_Composite(fx,a,b,r)
     Trapezoid_Composite(fx,a,b,r)
+    Calc = St.Numerical_Integration(fx,a,b) # if you are using Jupyter Note-Book you don't use St
+    print(Calc)
+    Calc.Graph()
